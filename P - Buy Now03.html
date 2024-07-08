@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WaveSync</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="- 01.css">
+    <link rel="stylesheet" href="- BuyNow.css">
+    <link rel="stylesheet" href="FontAwesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="FontAwesome/css/fontawesome.css"/>
+    <link rel="stylesheet" href="FontAwesome/css/brands.css"/>
+    <link rel="stylesheet" href="FontAwesome/css/solid.css"/>
+    <link rel="stylesheet" href="Font Awesome/css/all.css">
+</head>
+<body>
+    <div class="boxmain" id="bg">
+        <div class="main" id="mainbg">
+            <img src="images/bgh.jpg" alt="Background" id="bg1">
+        </div>
+        <div class="nav" id="navtitle">
+            <div class="nav" id="mininav">
+                <div class="logo" id="logobox">
+                    <img src="images/logo01.png" alt="Logo">
+                </div>
+                <p class="title">WaveSync</p>
+            </div>
+        
+            <!-- HAMBURGER MENU -->
+            <div class="toggle-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- NAVIGATION -->
+            <nav class="hamburger-menu" id="menu">
+                <div class="minimenu">
+                    <div class="yourmenu">
+                        <div class="photo">
+                            <img src="images/fp.jfif" alt="">
+                        </div>
+                        <ul>
+                            <li><a href="B - Dashboard.html" class="dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+                            <li><a href="C - Messages.html" class="message"><i class="fas fa-message"></i> Messages</a></li>
+                            <li><a href="D - Cart.html" class="cart"><i class="fas fa-cart-shopping"></i> Cart</a></li>
+                            <li><a href="E - Notifications.html" class="notification"><i class="fas fa-bell"></i> Notifications</a></li>
+                            <li><a href="F - Profile.html" class="profile"><i class="fas fa-user"></i> Profile</a></li>
+                            <hr><br>
+                            <li><a href="G - Settings.html" class="settings"><i class="fas fa-gear"></i> Settings</a></li>
+                            <li><a href="H - Report.html" class="report"><i class="fas fa-bug"></i> Report</a></li>
+                            <li><a href="I - Feedback.html" class="feedback"><i class="fas fa-comment"></i> Feedback</a></li>
+                            <li><a href="J - About Us.html" class="aboutus"><i class="fas fa-circle-info"></i> About Us</a></li>
+                            <li><a href="A - LogIn.html" class="logout"><i class="fas fa-right-from-bracket"></i> Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+<!--1.#################################################################################################-->
+
+        <div>
+<div class="buynow">
+    <div class="buynow1">
+        <h1>Order Checkout</h1>
+    </div>
+    <div class="buynow2">
+        <img src="images/bag003.png" alt="">
+        <h2 class="btitle">Class B3</h2>
+        <p class="p1">&#8369;3,000</p>
+        <p class="pay">Pay Using ...</p>
+        <div class="delivery">
+            <p class="cuz">Customer Details</p>
+            <p class="name" style="font-weight: bold; font-size: 20px;">Cuz, Tomer C.</p>
+            <p class="number">09876543210</p>
+            <p class="emaill">cuztomer@gmail.com</p>
+            <p class="address">00 Anywhere St. Somewhere, Everywhere</p>
+        </div>
+        <div>
+            <a href=""><p class="pay01">Gcash</p></a>
+            <a href=""><p class="pay01">PayPal</p></a>
+            <a href=""><p class="pay02">Bank</p></a>
+            <a href=""><p class="pay02">Cash On Delivery</p></a>
+        </div>
+        
+        <br><br><br>
+        <!-- ######################## -->
+        <div class="checkout-container">
+            <div class="order-control">
+                <button id="decrement">-</button>
+                <input type="number" id="orderNumber" value="1" min="1" max="5">
+                <button id="increment">+</button>
+            </div>
+            <div class="price-display">
+                <p>Price per item: &#8369;<span id="pricePerItem">4000.00</span></p>
+                <p>Number of orders: <span id="orderCount">1</span></p>
+                <p class="total1">Total Price: &#8369;<span id="totalPrice">4000.00</span></p>
+                <p class="discount" id="discountText">Discount: 20%</p>
+                <p>Shipping Fee: &#8369;<span id="shippingFee">50.00</span></p>
+                <p class="total2">Final Total Price: $<span id="finalTotalPrice">15</span></p>
+            </div>
+        </div>
+        <p class="payy"><a href="#">Pay Now</a></p>
+    </div>
+</div>
+        </div>
+
+<!--2.#################################################################################################-->
+    
+    </div>
+    <script>
+        let orderCount = 1;
+        const pricePerItem = 3000;
+        const shippingFee = 50;
+        const discountPercentage = 20;
+        const maxCustomersForDiscount = 100;
+        let customerCount = 0;  // Assuming this will be updated by some backend or other logic
+
+        document.getElementById('decrement').addEventListener('click', () => {
+            if (orderCount > 1) {
+                orderCount--;
+                updateOrderDetails();
+            } else {
+                alert("Minimum number of orders reached.");
+            }
+        });
+
+        document.getElementById('increment').addEventListener('click', () => {
+            if (orderCount < 5) {
+                orderCount++;
+                updateOrderDetails();
+            } else {
+                alert("Maximum number of orders reached.");
+            }
+        });
+
+        document.getElementById('orderNumber').addEventListener('input', (event) => {
+            let value = parseInt(event.target.value);
+            if (isNaN(value) || value < 1) {
+                value = 1;
+                alert("Minimum number of orders reached.");
+            } else if (value > 5) {
+                value = 5;
+                alert("Maximum number of orders reached.");
+            }
+            orderCount = value;
+            updateOrderDetails();
+        });
+
+        function updateOrderDetails() {
+            document.getElementById('orderNumber').value = orderCount;
+            document.getElementById('orderCount').textContent = orderCount;
+            let totalPrice = orderCount * pricePerItem;
+            const finalTotalPrice = calculateFinalTotal(totalPrice);
+
+            document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+            document.getElementById('shippingFee').textContent = shippingFee.toFixed(2);
+            document.getElementById('finalTotalPrice').textContent = finalTotalPrice.toFixed(2);
+        }
+
+        function calculateFinalTotal(totalPrice) {
+            let finalTotalPrice = totalPrice + shippingFee;
+
+            if (customerCount < maxCustomersForDiscount) {
+                const discount = (totalPrice * discountPercentage) / 100;
+                finalTotalPrice -= discount;
+            }
+
+            return finalTotalPrice;
+        }
+
+        // Initialize order details
+        updateOrderDetails();
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+.item {
+    position: relative;
+    margin-bottom: 20px;
+    border: 2px solid antiquewhite;
+    padding: 25px 25px;
+    width: 900px;
+    border-radius: 25px;
+    background-color: #1c1d34;
+}
+.quantity {
+    position: relative;
+    margin-left: 20px;
+    text-align: end;
+    right: 50px;
+}
+.decrement, .increment, .quantity-value {
+    height: 30px;
+    width: 30px;
+    font-size: 25px;
+}
+.quantity-value {
+    padding: 5px 10px;
+   color: antiquewhite;
+}
+.total-price {
+    position: fixed;
+    bottom: 65px;
+    font-weight: bold;
+    color: #1c1d34;
+    font-size: 25px;
+    right: 150px;
+    z-index: 1;
+    text-align: center;
+}
+.buynow {
+    position: fixed;
+    bottom: 20px;
+    font-weight: bold;
+    color: antiquewhite;
+    font-size: 25px;
+    right: 185px;
+    z-index: 1;
+    background-color: antiquewhite;
+    color: #1c1d34;
+    border: 2px solid black;
+    text-align: end;
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+.buynow:hover {
+    background-color: green;
+    color: antiquewhite;
+    border: 5px solid antiquewhite;
+}
+.total {
+    bottom: 5px;
+    right: 120px;
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    background-color: peachpuff;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.item img {
+    height: 100px;
+    background-color: peachpuff;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.item label {
+    position: relative;
+    color: antiquewhite;
+    font-size: 25px;
+}
+a {
+    text-decoration: none;
+}
+.hamburger-menu .cart, .hamburger-menu a .fa-cart-shopping {
+    text-decoration: none;
+    color: green;
+}

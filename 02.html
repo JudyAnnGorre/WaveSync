@@ -1,0 +1,148 @@
+<!-- SIDE MENU 2 -->
+
+<div>
+    <div class="hamburger-menu2" id="menu2">
+        <div class="minimenu2">
+            <div class="yourmenu2">
+                <button onclick="showDrawer('drawer1')">All Mail <i class="fas fa-envelopes-bulk"></i></button><br>
+                <button onclick="showDrawer('drawer2')">Starred <i class="fas fa-star"></i></button><br>
+                <button onclick="showDrawer('drawer3')">Snoozed <i class="fas fa-clock"></i></button><br>
+                <button onclick="showDrawer('drawer4')">Sent <i class="fas fa-envelope-circle-check"></i></button><br>
+                <button onclick="showDrawer('drawer5')">Outbox <i class="fas fa-circle-exclamation"></i></button><br>
+                <button onclick="showDrawer('drawer6')">Important <i class="fas fa-paperclip"></i></button><br>
+                <button onclick="showDrawer('drawer7')">Drafts <i class="fas fa-file"></i></button><br>
+                <button onclick="showDrawer('drawer8')">Spam <i class="fas fa-file-circle-exclamation"></i></button><br>
+                <button onclick="showDrawer('drawer9')">Trash <i class="fas fa-trash-can"></i></button><br>
+                <button onclick="showDrawer('drawer10')">Contacts <i class="fas fa-address-book"></i></button><br>
+                <button onclick="showDrawer('drawer11')">Settings <i class="fas fa-gear"></i></button><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="drawer" id="drawer1">
+        <div class="drawer-content">
+            <h2>All Mail</h2>
+            <p>Processing... Please wait...</p>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer2">
+        <div class="drawer-content">
+            <h2>Starred</h2>
+            <p>No Starred Messages</p>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer3">
+        <div class="drawer-content">
+            <h2>Snoozed</h2>
+            <p>No Snoozed Messages</p>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer4">
+        <div class="drawer-content">
+            <h2>Sent</h2>
+            <p>No Sent Messages</p>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer5">
+        <div class="drawer-content">
+            <h2>Outbox</h2>
+            <p>No Pending Messages</p>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer6">
+        <div class="drawer-content">
+            <h2>Important</h2>
+            <p>No Messages are Marked Important</p>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer7">
+        <div class="drawer-content">
+            <h2>Drafts</h2>
+            <p>No Draft Messages</p>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer8">
+        <div class="drawer-content">
+            <h2>Spam</h2>
+            <p>No Spam Messages</p>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer9">
+        <div class="drawer-content">
+            <h2>Trash</h2>
+            <p>5 Messages</p>
+            <div class="trash01">
+                <img src="images/x10.jpg" alt="">
+                <p class="mtitle">Jjjjaaannnn</p>
+                <p class="mcontent">aaaaaAAAAAHHHHHHHHHHH!!!.</p>
+            </div>
+            <div class="trash02">
+                <img src="images/x11.jpg" alt="">
+                <p class="mtitle">Sugarcube</p>
+                <p class="mcontent">I wanna be a stone in my next life ㅡㅅㅡ</p>
+            </div>
+            <div class="trash03">
+                <img src="images/x12.jpg" alt="">
+                <p class="mtitle">Taechwita</p>
+                <p class="mcontent">ㅡ_ㅡ</p>
+            </div>
+            <div class="trash04">
+                <img src="images/x13.jpg" alt="">
+                <p class="mtitle">RRRRrrrrapmonstooo</p>
+                <p class="mcontent">You got no jams</p>
+            </div>
+            <div class="trash05">
+                <img src="images/x14.jpg" alt="">
+                <p class="mtitle">noHope</p>
+                <p class="mcontent">I hate snakeu<br>Oh my gahd my heart is oh my gahd</p>
+            </div>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer10">
+        <div class="drawer-content">
+            <h2>Contacts</h2>
+            <p>No Saved Contacts</p>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+    <div class="drawer" id="drawer11">
+        <div class="drawer-content">
+            <h2>Settings</h2>
+            <p></p>
+            <label class="checkbox-container">
+                <input type="checkbox"> Allow everyone to send you a message?
+                <span class="checkmark"></span>
+            </label>
+            <button onclick="closeDrawer()">Close</button>
+        </div>
+    </div>
+</div>
+
+<!--2.#################################################################################################-->
+
+
+let currentDrawer = null;
+
+    function showDrawer(drawerId) {
+        if (currentDrawer) {
+            currentDrawer.classList.remove('open');
+        }
+        currentDrawer = document.getElementById(drawerId);
+        currentDrawer.classList.add('open');
+    }
+
+    function closeDrawer() {
+        if (currentDrawer) {
+            currentDrawer.classList.remove('open');
+            currentDrawer = null;
+        }
+    }

@@ -1,0 +1,661 @@
+body {
+    background-color: #1C1D34;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+#mainbg #bg1 {
+    position: fixed;
+    background-attachment: fixed;
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    opacity: 0.25;
+}
+#navtitle {
+    position: absolute;
+    height: 75px;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    box-shadow: 1px 1px 2px 2px rgb(247, 247, 247);
+    top: 50px;
+    left: 50px;
+    right: 50px;
+}
+#mininav {
+    position: inherit;
+    height: 65px;
+    background-color: antiquewhite;
+    border-radius: 100px;
+    box-shadow: 1px 1px 2px 2px rgb(20, 20, 50);
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    z-index: 2;
+}
+.logo img {
+    position: absolute;
+    top: 5px;
+    left: 65px;
+    height: 55px;
+    width: 55px;
+}
+#mininav .title {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    color: #1C1D34;
+    top: -5px;
+    left: 135px;
+    text-align: left;
+}
+#mininav .title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#mininav p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1C1D34;
+    text-align: right;
+}/*
+i {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    font-weight: 600;
+}
+#mininav .home {
+    top: 8px;
+    right: 500px;
+}
+#mininav .user {
+    top: 8px;
+    right: 25px;
+}
+    .nav .fa-user {
+        top: 22.5px;
+        font-size: 15px;
+        right: 75px;
+        color: #1C1D34;
+        text-align: right;
+    }
+#mininav .notif {
+    top: 8px;
+    right: 100px;
+}
+    .nav .fa-bell {
+        top: 22.5px;
+        font-size: 15px;
+        right: 192.5px;
+        color: #1C1D34;
+        text-align: right;
+    }
+#mininav .cart {
+    top: 8px;
+    right: 220px;
+}
+    .nav .fa-cart-shopping {
+        top: 22.5px;
+        font-size: 15px;
+        right: 252.5px;
+        color: #1C1D34;
+        text-align: right;
+    }
+#mininav .messages {
+    top: 8px;
+    right: 280px;
+}
+    .nav .fa-message {
+        top: 22.5px;
+        font-size: 15px;
+        right: 350px;
+        color: #1C1D34;
+        text-align: right;
+    }
+#mininav .home {
+    top: 8px;
+    right: 380px;
+}
+    .nav .fa-home {
+        top: 22.5px;
+        font-size: 15px;
+        right: 425px;
+        color: #1C1D34;
+        text-align: right;
+    }*/
+
+
+.toggle-btn {
+    position: fixed;
+    cursor: pointer;
+    font-size: 30px;
+    top: 70px;
+    left: 75px;
+    color: #1C1D34;
+}
+#menu {
+    position: absolute;
+    /* display: none;  //Initially hide the menu */
+    transition: opacity 1s ease; /* Smooth transition */
+    opacity: 1; /* Initially invisible */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px 2px rgb(247, 247, 247);
+    width: 200px;
+    text-align: left;
+    background-position: left;
+    height: 750px;
+    padding-top: 10px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    z-index: 1;
+}
+.minimenu {
+    position: inherit;
+    height: 675px;
+    background-color: antiquewhite;
+    border-radius: 40px;
+    box-shadow: 1px 1px 2px 2px rgb(20, 20, 50);
+    top: 6px;
+    left: 5px;
+    right: 5px;
+    padding-top: 100px;
+    z-index: 2;
+}
+#menu.show {
+    display: block;
+    opacity: 1; /* Make it visible */
+}
+/* Additional styles for the menu items */
+.hamburger-menu ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+.hamburger-menu li {
+    padding: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for menu items */
+    transform: translateY(-20px); /* Initially hidden */
+}
+.hamburger-menu li a:hover {
+    color: green;
+}
+.hamburger-menu.show li {
+    transform: translateY(0); /* Show menu items */
+}
+.hamburger-menu a {
+    text-decoration: none;
+    color: #1C1D34;
+    font-size: 20px;
+}
+
+/* Styles for the icons */
+.hamburger-menu a i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+.hamburger-menu .message, .hamburger-menu a .fa-message {
+    text-decoration: none;
+    color: green;
+}
+
+.hamburger-menu .logout {
+    position: absolute;
+    padding-top: 5px;
+}
+.hamburger-menu button {
+    text-decoration: none;
+    color: #1C1D34;
+    font-size: 20px;
+    background: none;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 15px;
+}
+.hamburger-menu button:hover, .hamburger-menu2 button:hover {
+    color: green;
+    cursor: pointer;
+}
+.hamburger-menu button i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: plum;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+.drawer-content {
+    position: inherit;
+    padding: 20px;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    width: auto;
+    height: 100%;
+    border-radius: 30px;
+    border: 3px solid #1C1D34;
+    background: thistle;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(0);
+}
+.drawer-content button {
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: antiquewhite;
+    border: 2px solid #1C1D34;
+    color: #1C1D34;
+}
+.drawer.open {
+    transform: translateX(0);
+    position: absolute;
+    left: 275px;
+    right: 275px;
+    top: 150px;
+    width: auto;
+    height: 1000px;
+    border-radius: 30px;
+    display: flex;
+}
+/*SETTINGS*/
+.checkbox-container {
+    margin-bottom: 20px;
+}
+.checkbox-label {
+    margin-left: 10px;
+    font-size: 20px;
+}
+/*REPORT & FEEDBACK*/
+#drawer23 label {
+    left: 25px;
+    font-weight: bold;
+}
+#drawer23 textarea {
+    position: relative;
+    right: 15px;
+    left: 20px;
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+#drawer22 textarea {
+    position: relative;
+    top: -25px;
+    right: 15px;
+    left: 20px;
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+#drawer23 input[type="submit"], #drawer22 input[type="submit"] {
+    padding: 10px 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #1C1D34;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    left: 50px;
+    font-size: 20px;
+}
+#drawer23 input[type="submit"]:hover, #drawer22 input[type="submit"].hover {
+    background-color: black;
+}
+/*PROFILE*/
+.pictures .us {
+    position: relative;
+    height: 75px;
+    border-radius: 100px;
+    border: 3px solid #1C1D34;
+}
+.pictures p {
+    position: absolute;
+    left: 125px;
+    font-size: 20px;
+}
+#name01 {
+    top: 80px;
+}
+#name02 {
+    top: 165px;
+}
+#name03 {
+    top: 250px;
+}
+#name04 {
+    top: 335px;
+}
+.pictures .descrip img {
+    height: 25px;
+    position: absolute;
+    left: 125px;
+    margin-top: -50px;
+}
+
+/*##########################################*/
+
+#menu2 {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    /* display: none;  //Initially hide the menu */
+    transition: opacity 1s ease; /* Smooth transition */
+    opacity: 1; /* Initially invisible */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px 2px rgb(247, 247, 247);
+    width: 200px;
+    text-align: right;
+    background-position: left;
+    height: 750px;
+    padding-top: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    z-index: 1;
+}
+.minimenu2 {
+    position: inherit;
+    height: 675px;
+    background-color: rgb(202, 181, 153);
+    border-radius: 40px;
+    box-shadow: 1px 1px 2px 2px rgb(20, 20, 50);
+    top: 6px;
+    left: 5px;
+    right: 5px;
+    padding-top: 75px;
+    z-index: 2;
+}
+#menu2.show {
+    display: block;
+    opacity: 1; /* Make it visible */
+}
+/* Additional styles for the menu items */
+.hamburger-menu2 button {
+    position: relative;
+    top: 40px;
+    background: none;
+    border: none;
+    padding-top: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style-type: none;
+    padding-left: 10px;
+    text-align: right;
+    font-size: 20px;
+    right: 50px;
+    padding: 10px;
+    color: #1C1D34;
+    transition: transform 0.3s ease; /* Smooth transition for menu items */
+    transform: translateY(-20px); /* Initially hidden */
+}
+.hamburger-menu2.show li {
+    transform: translateY(0); /* Show menu items */
+}
+
+/* Styles for the icons */
+.hamburger-menu2 button i {
+    position: absolute;
+    right: -40px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.hamburger-menu2 .message, .hamburger-menu2 a .fa-message {
+    text-decoration: none;
+    color: green;
+}
+
+
+.trash01 {
+    position: relative;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    right: 10px;
+    width: auto;
+    height: 75px;
+}
+.trash01 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+}
+.trash02 {
+    position: relative;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 5px;
+    left: 0;
+    right: 10px;
+    width: auto;
+    height: 75px;
+}
+.trash02 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+}
+.trash03 {
+    position: relative;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 10px;
+    left: 0;
+    right: 10px;
+    width: auto;
+    height: 75px;
+}
+.trash03 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+}
+.trash04 {
+    position: relative;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 15px;
+    left: 0;
+    right: 10px;
+    width: auto;
+    height: 75px;
+}
+.trash04 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+}
+.trash05 {
+    position: relative;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 20px;
+    left: 0;
+    right: 10px;
+    width: auto;
+    height: 100px;
+}
+.trash05 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 75px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+}
+
+
+.mesagesss {
+    position: absolute;
+    display: flex;
+    overflow-y: auto;
+    height: 1000px;
+}
+.message01 {
+    position: absolute;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    top: 160px;
+    left: 286px;
+    right: 50px;
+    height: 100px;
+}
+.message01 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 75px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+}
+.mtitle {
+    position: relative;
+    color: antiquewhite;
+    left: 110px;
+    font-size: 25px;
+    top: -5px;
+}
+.mcontent {
+    position: relative;
+    color: antiquewhite;
+    left: 110px;
+    width: 60%;
+    right: 10px;
+    top: -25px;
+    font-size: 15px;
+}
+.message01 .fa-shop {
+    position: relative;
+    
+    color: antiquewhite;
+    background-color: #1C1D34;
+    border: 3px solid black;
+    border-radius: 100px;
+    top: -  100px;
+}
+.mess01 {
+    position: absolute;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    top: 260px;
+    left: 286px;
+    right: 50px;
+    height: 400px;
+}
+.mess01 .date {
+    position: relative;
+    text-align: center;
+    color: rgb(190, 190, 190);
+}
+.mess01 .img {
+    position: relative;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 100px;
+    height: 50px;
+    left: 15px;
+}
+.mess01 .chat {
+    position: relative;
+    border: 2px solid rgba(250, 235, 215, 0.76);
+    width: 350px;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    top: -75px;
+    left: 75px;
+}
+.mess01 .ask {
+    position: relative;
+    font-size: 20px;
+    color: peachpuff;
+    border: 2px solid gray;
+    text-align: center;
+    padding: 10px;
+    top: -75px;
+    left: 25px;
+    margin-right: 50px;
+    right: inherit;
+    border-radius: 10px;
+}
+.mess01 .ask i {
+    color: rgb(189, 189, 189);
+    padding-top: 15px;
+}
+.mess01 #chatbox {
+    position: relative;
+    top: -75px;
+    left: 25px;
+    width: 850px;
+    height: 40px;
+    padding: 5px;
+    font-size: 18px;
+    border: 2px solid #1C1D34;
+    border-radius: 15px;
+    box-shadow: 1px 1px 3px 3px gray;
+    background-color: rgb(212, 212, 212);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.mess01 .fa-face-laugh {
+    position: relative;
+    font-size: 40px;
+    top: -65px;
+    left: 40px;
+    color: antiquewhite;
+    background-color: #1C1D34;
+    border: 3px solid black;
+    border-radius: 100px;
+}
+.mess01 .fa-circle-plus {
+    position: relative;
+    font-size: 40px;
+    top: -65px;
+    left: 40px;
+    color: antiquewhite;
+    background-color: #1C1D34;
+    border: 3px solid black;
+    border-radius: 100px;
+}

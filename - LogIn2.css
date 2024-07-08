@@ -1,0 +1,144 @@
+.formmm {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#loginForm {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    padding: 20px;
+}
+#loginForm label {
+    font-size: 25px;
+    padding: 15px;
+}
+#loginForm input {
+    height: 25px;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    border: 3px solid #1C1D34;
+    box-shadow: 1px 1px 2px 2px pink;
+}
+.fa-eye {
+    position: absolute;
+    left: 1000px;
+    top: -7.5px;
+}
+
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+#submitbtn {
+    font-size: 20px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: antiquewhite;
+    background-color: #1C1D34;
+    border: 3px solid white;
+    box-shadow: 1px 1px 2px 2px pink;
+}
+#submitbtn:hover {
+    background-color: #6CE679;
+    color: #1C1D34;
+    border: 3px solid #1C1D34;
+    box-shadow: 1px 1px 2px 2px pink;
+}
+.forgotpass {
+    position: relative;
+    text-align: center;
+    top: 75px;
+}
+.forgot a {
+    color: #1C1D34;
+    text-decoration: none;
+}
+.forgot a:hover {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+
+#uniqueSignInForm {
+    position: relative;
+    top: 110px;
+    text-align: center;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.unique-form-group {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.unique-password-input {
+    position: relative;
+}
+.unique-form-group label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.unique-toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Style the form layout */
+
+#uniqueSignInForm label {
+    display: block;
+    font-size: 25px;
+}
+
+#uniqueSignInForm input, #uniqueSignInForm select, #unique-gender {
+    position: relative;
+    height: 25px;
+    width: 90%;
+    left: 0;
+    right: 10%;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    border: 3px solid #1C1D34;
+    box-shadow: 1px 1px 2px 2px pink;
+}
+#uniqueSignInForm #unique-gender {
+    height: 40px;
+}
+
+#uniqueSignInForm button {
+    font-size: 20px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: antiquewhite;
+    background-color: #1C1D34;
+    border: 3px solid white;
+    box-shadow: 1px 1px 2px 2px pink;
+    cursor: pointer;
+}
+
+#uniqueSignInForm button:hover {
+    background-color: #6CE679;
+    color: #1C1D34;
+    border: 3px solid #1C1D34;
+    box-shadow: 1px 1px 2px 2px pink;
+}

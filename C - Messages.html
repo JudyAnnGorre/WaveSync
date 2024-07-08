@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WaveSync</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="- Messages.css">
+    <link rel="stylesheet" href="FontAwesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="FontAwesome/css/fontawesome.css"/>
+    <link rel="stylesheet" href="FontAwesome/css/brands.css"/>
+    <link rel="stylesheet" href="FontAwesome/css/solid.css"/>
+    <link rel="stylesheet" href="Font Awesome/css/all.css">
+</head>
+<body>
+    <div class="boxmain" id="bg">
+        <div class="main" id="mainbg">
+            <img src="images/bgh.jpg" alt="Background" id="bg1">
+        </div>
+        <div class="nav" id="navtitle">
+            <div class="nav" id="mininav">
+                <div class="logo" id="logobox">
+                    <img src="images/logo01.png" alt="Logo">
+                </div>
+                <p class="title">WaveSync</p>
+            </div>
+        
+            <!-- HAMBURGER MENU -->
+            <div class="toggle-btn" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- NAVIGATION -->
+            <nav class="hamburger-menu" id="menu">
+                <div class="minimenu">
+                    <div class="yourmenu">
+                        <ul>
+                            <li><a href="B - Dashboard.html" class="dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+                            <li><a href="C - Messages.html" class="message"><i class="fas fa-message"></i> Messages</a></li>
+                            <li><a href="D - Cart.html" class="cart"><i class="fas fa-cart-shopping"></i> Cart</a></li>
+                            <li><a href="E - Notifications.html" class="notification"><i class="fas fa-bell"></i> Notifications</a></li>
+                            <li><a href="F - Profile.html" class="profile"><i class="fas fa-user"></i> Profile</a></li>
+                            <hr><br>
+                            <button onclick="showDrawer('drawer21')"><i class="fas fa-gear"></i> Settings</button>
+                            <button onclick="showDrawer('drawer22')"><i class="fas fa-bug"></i> Report</button>
+                            <button onclick="showDrawer('drawer23')"><i class="fas fa-comment"></i> Feedback</button>
+                            <button onclick="showDrawer('drawer24')"><i class="fas fa-circle-info"></i> About Us</button><br><br>
+                            <li><a href="index.html" class="logout"><i class="fas fa-right-from-bracket"></i> Log Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="drawer" id="drawer21">
+                <div class="drawer-content">
+                    <h2>Settings</h2>
+                    <p>Check the boxes of your preference</p>
+                    <h3>Please select Your Prefered Currency</h3>
+                    <form>
+                        <div class="checkbox-container">
+                            <input type="radio" id="option1" name="radioGroup" value="Option 1">
+                            <label for="option1" class="checkbox-label"> $ (Dollars)</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="radio" id="option2" name="radioGroup" value="Option 2">
+                            <label for="option2" class="checkbox-label"> &#8369; (Pesos)</label>
+                        </div>
+                    </form>
+                    <br>
+                    <form>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check1" name="checkGroup" value="Check 1">
+                            <label for="check1" class="checkbox-label"> Send updates to your email address</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check2" name="checkGroup" value="Check 2">
+                            <label for="check2" class="checkbox-label"> Allow push notifications</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check3" name="checkGroup" value="Check 3">
+                            <label for="check3" class="checkbox-label"> Notify when order is on the way</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check4" name="checkGroup" value="Check 4">
+                            <label for="check4" class="checkbox-label"> Notify when promos and discounts are available</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check5" name="checkGroup" value="Check 5">
+                            <label for="check5" class="checkbox-label"> Notify when system maintenance is about to happen</label>
+                        </div>
+                    </form>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer22">
+                <div class="drawer-content">
+                    <h2>Report</h2>
+                    <p></p>
+                    <form>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check1" name="checkGroup" value="Check 1">
+                            <label for="check1" class="checkbox-label"> Found a bug</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check2" name="checkGroup" value="Check 2">
+                            <label for="check2" class="checkbox-label"> Problem with the order</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check3" name="checkGroup" value="Check 3">
+                            <label for="check3" class="checkbox-label"> Problem with Seller</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check4" name="checkGroup" value="Check 4">
+                            <label for="check4" class="checkbox-label"> Problem with Payment</label>
+                        </div>
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="check5" name="checkGroup" value="Check 5">
+                            <label for="check5" class="checkbox-label"> Others (Please specify)</label>
+                        </div>
+                    </form>
+                    <form action="submit_feedback.php" method="post">
+                        <div>
+                            <label for="feedback"></label><br>
+                            <textarea id="feedback" name="feedback" placeholder="Enter your feedback here..." required></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer23">
+                <div class="drawer-content">
+                    <h2>Feedback</h2>
+                    <p></p>
+                    <form action="submit_feedback.php" method="post">
+                        <div>
+                            <label for="feedback">Tell us about your experience with WaveSync:</label><br>
+                            <textarea id="feedback" name="feedback" placeholder="Enter your feedback here..." required></textarea>
+                        </div>
+                        <div>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer24">
+                <div class="drawer-content">
+                    <h2>About Us</h2>
+                    <p></p>
+                    <div class="pictures">
+                        <div><img src="images/kai.jpg" alt="" class="us"><p class="name" id="name01"> Go, Caryl Rose M.</p><div class="descrip"><a href="https://web.facebook.com/Yoongi.Kai23"><img src="images/facebook.png" alt="" id="fb01"></a></div></div>
+                        <div><img src="images/juday.jpg" alt="" class="us"><p class="name" id="name02"> Gorre, Judy Ann</p><div class="descrip"><a href="https://web.facebook.com/Ady829/"><img src="images/facebook.png" alt="" id="fb02"></a></div></div>
+                        <div><img src="images/kath.jpg" alt="" class="us"><p class="name" id="name03"> Tano, Kathleene Anne G.</p><div class="descrip"><a href="https://web.facebook.com/profile.php?id=100072442204404"><img src="images/facebook.png" alt="" id="fb03"></a></div></div>
+                        <div><img src="images/matt.jpg" alt="" class="us"><p class="name" id="name04"> Merca, Dhaienz Matthew</p><div class="descrip"><a href="https://web.facebook.com/matt.merca.58"><img src="images/facebook.png" alt="" id="fb04"></a></div></div>
+                    </div>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+        </div>
+
+<!--#################################################################################################-->
+<!--
+            <div class="hamburger-menu2" id="menu2">
+                <div class="minimenu2">
+                    <div class="yourmenu2">
+                        <button onclick="showDrawer('drawer1')">All Mail <i class="fas fa-envelopes-bulk"></i></button><br>
+                        <button onclick="showDrawer('drawer2')">Starred <i class="fas fa-star"></i></button><br>
+                        <button onclick="showDrawer('drawer3')">Snoozed <i class="fas fa-clock"></i></button><br>
+                        <button onclick="showDrawer('drawer4')">Sent <i class="fas fa-envelope-circle-check"></i></button><br>
+                        <button onclick="showDrawer('drawer5')">Outbox <i class="fas fa-circle-exclamation"></i></button><br>
+                        <button onclick="showDrawer('drawer6')">Important <i class="fas fa-paperclip"></i></button><br>
+                        <button onclick="showDrawer('drawer7')">Drafts <i class="fas fa-file"></i></button><br>
+                        <button onclick="showDrawer('drawer8')">Spam <i class="fas fa-file-circle-exclamation"></i></button><br>
+                        <button onclick="showDrawer('drawer9')">Trash <i class="fas fa-trash-can"></i></button><br>
+                        <button onclick="showDrawer('drawer10')">Contacts <i class="fas fa-address-book"></i></button><br>
+                        <button onclick="showDrawer('drawer11')">Settings <i class="fas fa-gear"></i></button><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="drawer" id="drawer1">
+                <div class="drawer-content">
+                    <h2>All Mail</h2>
+                    <p>Processing... Please wait...</p>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer2">
+                <div class="drawer-content">
+                    <h2>Starred</h2>
+                    <p>No Starred Messages</p>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer3">
+                <div class="drawer-content">
+                    <h2>Snoozed</h2>
+                    <p>No Snoozed Messages</p>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer4">
+                <div class="drawer-content">
+                    <h2>Sent</h2>
+                    <p>No Sent Messages</p>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer5">
+                <div class="drawer-content">
+                    <h2>Outbox</h2>
+                    <p>No Pending Messages</p>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer6">
+                <div class="drawer-content">
+                    <h2>Important</h2>
+                    <p>No Messages are Marked Important</p>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer7">
+                <div class="drawer-content">
+                    <h2>Drafts</h2>
+                    <p>No Draft Messages</p>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer8">
+                <div class="drawer-content">
+                    <h2>Spam</h2>
+                    <p>No Spam Messages</p>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer9">
+                <div class="drawer-content">
+                    <h2>Trash</h2>
+                    <p>5 Messages</p>
+                    <div class="trash01">
+                        <img src="images/x10.jpg" alt="">
+                        <p class="mtitle">Jjjjaaannnn</p>
+                        <p class="mcontent">aaaaaAAAAAHHHHHHHHHHH!!!.</p>
+                    </div>
+                    <div class="trash02">
+                        <img src="images/x11.jpg" alt="">
+                        <p class="mtitle">Sugarcube</p>
+                        <p class="mcontent">I wanna be a stone in my next life ㅡㅅㅡ</p>
+                    </div>
+                    <div class="trash03">
+                        <img src="images/x12.jpg" alt="">
+                        <p class="mtitle">Taechwita</p>
+                        <p class="mcontent">ㅡ_ㅡ</p>
+                    </div>
+                    <div class="trash04">
+                        <img src="images/x13.jpg" alt="">
+                        <p class="mtitle">RRRRrrrrapmonstooo</p>
+                        <p class="mcontent">You got no jams</p>
+                    </div>
+                    <div class="trash05">
+                        <img src="images/x14.jpg" alt="">
+                        <p class="mtitle">noHope</p>
+                        <p class="mcontent">I hate snakeu<br>Oh my gahd my heart is oh my gahd</p>
+                    </div>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer10">
+                <div class="drawer-content">
+                    <h2>Contacts</h2>
+                    <p>No Saved Contacts</p>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+            <div class="drawer" id="drawer11">
+                <div class="drawer-content">
+                    <h2>Settings</h2>
+                    <p></p>
+                    <label class="checkbox-container">
+                        <input type="checkbox"> Allow everyone to send you a message?
+                        <span class="checkmark"></span>
+                    </label>
+                    <button onclick="closeDrawer()">Close</button>
+                </div>
+            </div>
+        </div>
+-->
+
+
+
+        <div class="messagesss" id="container">
+            <div class="scrollable-div">
+                <div class="message01">
+                    <img src="images/logo01.png" alt="">
+                    <p class="mtitle">WaveSync</p>
+                    <p class="mcontent">Empower Your Journey With Renewable Energy</p>
+                    
+                </div>
+                <div class="mess01">
+                    <p class="date">May 30, 2024 &nbsp;&nbsp;&nbsp;7:30 PM</p>
+                    <p class="date">You are chatting with WaveSync shop</p>
+                    <img src="images/logo01.png" alt="" class="img">
+                    <p class="chat">Thank you for ordering from our shop. We hope you are satisfied with your order. Please don’t forget to leave feedback or a review. It would help us build our credibility.</p>
+                    <p class="ask">How was your experience?<br><i class="fa-regular fa-star"></i>&emsp;<i class="fa-regular fa-star"></i>&emsp;<i class="fa-regular fa-star"></i>&emsp;<i class="fa-regular fa-star"></i>&emsp;<i class="fa-regular fa-star"></i></p>
+                    <input type="text" name="chat" id="chatbox" placeholder=" Send Message..."><i class="fa-regular fa-face-laugh"></i><i class="fas fa-circle-plus"></i>
+                </div>
+                
+            </div>
+        </div>
+        
+
+    </div>
+<script>
+    function openLocalFile() {
+        window.location.href = "B - SignUp.html";
+    }
+    let currentDrawer = null;
+
+    function showDrawer(drawerId) {
+        if (currentDrawer) {
+            currentDrawer.classList.remove('open');
+        }
+        currentDrawer = document.getElementById(drawerId);
+        currentDrawer.classList.add('open');
+    }
+
+    function closeDrawer() {
+        if (currentDrawer) {
+            currentDrawer.classList.remove('open');
+            currentDrawer = null;
+        }
+    }
+    /*
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("show"); // Toggle the "show" class
+    }*/
+
+
+
+    
+</script>
+</body>
+</html>

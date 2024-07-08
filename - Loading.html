@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(0, 0, 0); /* Light Gray */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .loading {
+            width: 1000px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <img class="loading" src="images/loading01.gif" alt="Loading">
+
+    <script>
+        // Simulate a delay to show the loading screen
+        setTimeout(function() {
+            window.location.href = "A - LogIn.html"; // Redirect to login page
+        }, 3000); // 3 seconds delay
+    </script>
+</body>
+</html>

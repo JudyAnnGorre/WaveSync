@@ -1,0 +1,270 @@
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+#menu2 {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    /* display: none;  //Initially hide the menu */
+    transition: opacity 1s ease; /* Smooth transition */
+    opacity: 1; /* Initially invisible */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px 2px rgb(247, 247, 247);
+    width: 225px;
+    text-align: right;
+    background-position: left;
+    height: 750px;
+    padding-top: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    z-index: 0;
+}
+.minimenu2 {
+    position: inherit;
+    height: 675px;
+    background-color: rgb(202, 181, 153);
+    border-radius: 40px;
+    box-shadow: 1px 1px 2px 2px rgb(20, 20, 50);
+    top: 6px;
+    left: 5px;
+    right: 5px;
+    padding-top: 75px;
+    z-index: 0;
+}
+#menu2.show {
+    display: block;
+    opacity: 1; /* Make it visible */
+}
+/* Additional styles for the menu items */
+.hamburger-menu2 button {
+    position: relative;
+    top: 40px;
+    background: none;
+    border: none;
+    padding-top: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style-type: none;
+    padding-left: 10px;
+    text-align: right;
+    font-size: 20px;
+    right: 50px;
+    padding: 10px;
+    color: #1C1D34;
+    transition: transform 0.3s ease; /* Smooth transition for menu items */
+    transform: translateY(-20px); /* Initially hidden */
+}
+.hamburger-menu2.show li {
+    transform: translateY(0); /* Show menu items */
+}
+
+/* Styles for the icons */
+.hamburger-menu2 button i {
+    position: absolute;
+    right: -40px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.hamburger-menu2 .message, .hamburger-menu2 a .fa-message {
+    text-decoration: none;
+    color: green;
+}
+
+
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 275px;
+    height: 100%;
+    background-color: plum;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+.drawer-content {
+    position: inherit;
+    padding: 20px;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    width: auto;
+    height: 100%;
+    border-radius: 30px;
+    border: 3px solid #1c1d34;
+    background: thistle;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(0);
+}
+.drawer-content button {
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: antiquewhite;
+    border: 2px solid #1C1D34;
+    color: #1C1D34;
+}
+.drawer.open {
+    transform: translateX(0);
+    position: absolute;
+    left: 275px;
+    right: 300px;
+    top: 150px;
+    width: auto;
+    height: 1000px;
+    border-radius: 30px;
+    display: flex;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+.toppp {
+    background-color: #1C1D34;
+    height: 50px;
+}
+.messagesss {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 1000px;
+    width: 100%; /* Ensure it takes the full width of the parent container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 10px; /* Optional: Add some padding if needed */
+}
+
+.message01 {
+    position: relative; /* Use relative positioning to allow normal flow */
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 75px;
+    left: 275px;
+    margin: 20px 0; /* Add margin for spacing between messages */
+    width: 1000px; /* Ensure it takes the full width of the parent container */
+    padding: 20px; /* Optional: Add padding inside the message box */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.message01 img {
+    position: relative; /* Change to relative */
+    top: 20px;
+    left: 41%;
+    height: 150px;
+    border-radius: 20px;
+    border: 2px solid peachpuff;
+    background-color: antiquewhite;
+}
+
+.message01 a {
+    position: relative; /* Change to relative */
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    background-color: pink;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.message01 a:hover {
+    color: peachpuff;
+    background-color: #292c81;
+    border: 2px solid burlywood;
+}
+
+.mtitle {
+    position: relative; /* Change to relative */
+    color: antiquewhite;
+    text-align: center;
+    font-size: 30px;
+    top: 0px;
+}
+
+.mcontent {
+    position: relative; /* Change to relative */
+    color: antiquewhite;
+    text-align: center;
+    top: -15px;
+    font-size: 25px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.message01 h3 {
+    position: relative; /* Change to relative */
+    color: #1C1D34;
+    left: 0;
+    top: 0;
+    background-color: antiquewhite;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.message01 li {
+    position: relative; /* Change to relative */
+    color: antiquewhite;
+    top: 0;
+    text-align: center;
+    list-style: none;
+    font-size: 18px;
+    margin-left: -20px;
+    margin-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.message01 .lititle {
+    list-style-type: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.message02 {
+    opacity: 0;
+}
+
+.message01 .buynow {
+    position: absolute;
+    font-size: 25px;
+    background-color: green;
+    color: antiquewhite;
+    border: 3px solid white;
+    bottom: 30px;
+    left: 50px;
+    padding: 10px;
+    border-radius: 30px;
+    width: 38%;
+    text-align: center;
+}
+.message01 a {
+    position: relative;
+    color: antiquewhite;
+}
+a:hover {
+    color: antiquewhite;
+    background: none;
+    border: none;
+}
+.message01 .addtocart {
+    position: relative;
+    left: 700px;
+    font-size: 25px;
+    background-color: green;
+    color: antiquewhite;
+    border: 3px solid white;
+    width: 38%;
+    bottom: 30px;
+    left: 500px;
+    padding: 10px 150px;
+    border-radius: 30px;
+    z-index: 1;
+}

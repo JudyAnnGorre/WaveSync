@@ -1,0 +1,516 @@
+body {
+    background-color: #1C1D34;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+#mainbg #bg1 {
+    position: fixed;
+    background-attachment: fixed;
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    opacity: 0.25;
+}
+#navtitle {
+    position: absolute;
+    height: 75px;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    box-shadow: 1px 1px 2px 2px rgb(247, 247, 247);
+    top: 50px;
+    left: 50px;
+    right: 50px;
+}
+#mininav {
+    position: inherit;
+    height: 65px;
+    background-color: antiquewhite;
+    border-radius: 100px;
+    box-shadow: 1px 1px 2px 2px rgb(20, 20, 50);
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    z-index: 2;
+}
+.logo img {
+    position: absolute;
+    top: 5px;
+    left: 65px;
+    height: 55px;
+    width: 55px;
+}
+#mininav .title {
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    color: #1C1D34;
+    top: -5px;
+    left: 135px;
+    text-align: left;
+}
+#mininav .title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#mininav p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1C1D34;
+    text-align: right;
+}/*
+i {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    font-weight: 600;
+}
+#mininav .home {
+    top: 8px;
+    right: 500px;
+}
+#mininav .user {
+    top: 8px;
+    right: 25px;
+}
+    .nav .fa-user {
+        top: 22.5px;
+        font-size: 15px;
+        right: 75px;
+        color: #1C1D34;
+        text-align: right;
+    }
+#mininav .notif {
+    top: 8px;
+    right: 100px;
+}
+    .nav .fa-bell {
+        top: 22.5px;
+        font-size: 15px;
+        right: 192.5px;
+        color: #1C1D34;
+        text-align: right;
+    }
+#mininav .cart {
+    top: 8px;
+    right: 220px;
+}
+    .nav .fa-cart-shopping {
+        top: 22.5px;
+        font-size: 15px;
+        right: 252.5px;
+        color: #1C1D34;
+        text-align: right;
+    }
+#mininav .messages {
+    top: 8px;
+    right: 280px;
+}
+    .nav .fa-message {
+        top: 22.5px;
+        font-size: 15px;
+        right: 350px;
+        color: #1C1D34;
+        text-align: right;
+    }
+#mininav .home {
+    top: 8px;
+    right: 380px;
+}
+    .nav .fa-home {
+        top: 22.5px;
+        font-size: 15px;
+        right: 425px;
+        color: #1C1D34;
+        text-align: right;
+    }*/
+
+
+.toggle-btn {
+    position: fixed;
+    cursor: pointer;
+    font-size: 30px;
+    top: 70px;
+    left: 75px;
+    color: #1C1D34;
+}
+#menu {
+    position: absolute;
+    /* display: none;  //Initially hide the menu */
+    transition: opacity 1s ease; /* Smooth transition */
+    opacity: 1; /* Initially invisible */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px 2px rgb(247, 247, 247);
+    width: 200px;
+    text-align: left;
+    background-position: left;
+    height: 750px;
+    padding-top: 10px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    z-index: 1;
+}
+.minimenu {
+    position: inherit;
+    height: 675px;
+    background-color: antiquewhite;
+    border-radius: 40px;
+    box-shadow: 1px 1px 2px 2px rgb(20, 20, 50);
+    top: 6px;
+    left: 5px;
+    right: 5px;
+    padding-top: 75px;
+    z-index: 2;
+}
+#menu.show {
+    display: block;
+    opacity: 1; /* Make it visible */
+}
+/* Additional styles for the menu items */
+.hamburger-menu ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+.hamburger-menu li {
+    padding: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for menu items */
+    transform: translateY(-20px); /* Initially hidden */
+}
+.hamburger-menu li a:hover {
+    color: green;
+}
+.hamburger-menu.show li {
+    transform: translateY(0); /* Show menu items */
+}
+.hamburger-menu a {
+    text-decoration: none;
+    color: #1C1D34;
+    font-size: 20px;
+}
+
+/* Styles for the icons */
+.hamburger-menu a i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+.hamburger-menu .dashboard, .hamburger-menu a .fa-home {
+    text-decoration: none;
+    color: green;
+}
+
+.hamburger-menu .logout {
+    position: absolute;
+    padding-top: 5px;
+}
+.hamburger-menu button {
+    text-decoration: none;
+    color: #1C1D34;
+    font-size: 20px;
+    background: none;
+    border: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 15px;
+}
+.hamburger-menu button:hover, .hamburger-menu2 button:hover {
+    color: green;
+    cursor: pointer;
+}
+.hamburger-menu button i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+.content-wrapper {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.slideshow-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    right: 50px;
+}
+
+.slideshow-column {
+    position: relative;
+    flex: 1;
+    padding: 10px;
+}
+
+.slideshow-container {
+    position: relative;
+    height: 250px;
+    width: 85%;
+    overflow: hidden;
+    background: #333;
+    top: -75px;
+    left: 200px;
+    border-radius: 30px;
+}
+#slideshow2 {
+    position: absolute;
+    top: -65px;
+    left: 120px;
+}
+
+.slide {
+    display: none;
+    border-radius: 30px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+
+
+
+#bg01 {
+    position: absolute;
+    background-color: #1C1D34;
+    border-radius: 30px;
+    border: 2px solid antiquewhite;
+    height: 225px;
+    width: 160px;
+    top: 62.5%;
+    left: 1160px;
+    display: flex;
+    align-content: end;
+}
+#p01 {
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 175px;
+    width: 140px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-content: center;
+}
+#bg01 p {
+    position: absolute;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 25px;
+    top: 165px;
+    left: 50px;
+    align-content: center;
+}
+#p01 img {
+    top: 20px;
+    padding-top: 5px;
+    margin-left: -10px;
+    height: 160px;
+    transform: scaleX(-1);
+}
+#bg02 {
+    position: absolute;
+    background-color: #1C1D34;
+    border-radius: 30px;
+    border: 2px solid antiquewhite;
+    height: 225px;
+    width: 160px;
+    top: 62.5%;
+    left: 635px;
+    display: flex;
+    align-content: end;
+}
+#p02 {
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 175px;
+    width: 140px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-content: center;
+}
+#bg02 p {
+    position: absolute;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 25px;
+    top: 165px;
+    left: 50px;
+    align-content: center;
+}
+#p02 img {
+    top: 20px;
+    padding-top: 5px;
+    margin-left: -10px;
+    height: 160px;
+}
+#bg03 {
+    position: absolute;
+    background-color: #1C1D34;
+    border-radius: 30px;
+    border: 2px solid antiquewhite;
+    height: 225px;
+    width: 160px;
+    top: 62.5%;
+    left: 285px;
+    display: flex;
+    align-content: end;
+}
+#p03 {
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 175px;
+    width: 140px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-content: center;
+}
+#bg03 p {
+    position: relative;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 25px;
+    top: 165px;
+    left: 45px;
+}
+#p03 img {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    height: 140px;
+}
+#bg04 {
+    position: absolute;
+    background-color: #1C1D34;
+    border-radius: 30px;
+    border: 2px solid antiquewhite;
+    height: 225px;
+    width: 160px;
+    top: 62.5%;
+    left: 985px;
+    display: flex;
+    align-content: end;
+}
+#p04 {
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 175px;
+    width: 140px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-content: center;
+}
+#bg04 p {
+    position: absolute;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 25px;
+    top: 165px;
+    left: 45px;
+    align-content: center;
+}
+#p04 img {
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    height: 150px;
+    transform: scaleX(-1);
+}
+#bg05 {
+    position: absolute;
+    background-color: #1C1D34;
+    border-radius: 30px;
+    border: 2px solid antiquewhite;
+    height: 225px;
+    width: 160px;
+    top: 62.5%;
+    left: 460px;
+    display: flex;
+    align-content: end;
+}
+#p05 {
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 175px;
+    width: 140px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-content: center;
+}
+#bg05 p {
+    position: absolute;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 25px;
+    top: 165px;
+    left: 45px;
+    align-content: center;
+}
+#p05 img {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    height: 150px;
+}
+
+#bg06 {
+    position: absolute;
+    background-color: #1C1D34;
+    border-radius: 30px;
+    border: 2px solid antiquewhite;
+    height: 225px;
+    width: 160px;
+    top: 62.5%;
+    left: 810px;
+    display: flex;
+    align-content: end;
+}
+#p06 {
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    height: 175px;
+    width: 140px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-content: center;
+}
+#bg06 p {
+    position: relative;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 25px;
+    top: 165px;
+    left: 45px;
+}
+#p06 img {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    height: 140px;
+    transform: scaleX(-1);
+}

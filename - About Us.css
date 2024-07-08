@@ -1,0 +1,79 @@
+
+.hamburger-menu .aboutus, .hamburger-menu a .fa-circle-info {
+    text-decoration: none;
+    color: green;
+}
+
+
+.whole {
+    position: absolute;
+    color: white;
+    left: 275px;
+    right: 50px;
+    bottom: 20px;
+    height: 600px;
+    background-color: #1c1d34;
+    border-radius: 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.about {
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    left: 25px;
+    right: 25px;
+    border: 3px solid antiquewhite;
+    padding: 50px;
+    border-radius: 30px;
+}
+.about h1 {
+    color: peachpuff;
+}
+.about p, .about ul li {
+    color: antiquewhite;
+    font-size: 20px;
+    padding: 25px;
+}
+
+.sync img {
+    position: absolute;
+    height: 100px;
+    border-radius: 100px;
+    display: inline;
+    border: 3px solid antiquewhite;
+}
+.sync p {
+    position: absolute;
+    bottom: 125px;
+}
+.wave #ws01 img {
+    left: 115px;
+}
+.wave #ws02 img {
+    left: 325px;
+}
+.wave #ws03 img {
+    left: 525px;
+}
+.wave #ws04 img {
+    left: 725px;
+}
+
+.wave #ws01 p {
+    left: 85px;
+}
+.wave #ws02 p {
+    left: 320px;
+}
+.wave #ws03 p {
+    left: 480px;
+}
+.wave #ws04 p {
+    left: 685px;
+}
+
+.sec {
+    position: relative;
+    bottom: -250px;
+}

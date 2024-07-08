@@ -1,0 +1,377 @@
+
+
+
+#menu2 {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    /* display: none;  //Initially hide the menu */
+    transition: opacity 1s ease; /* Smooth transition */
+    opacity: 1; /* Initially invisible */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 2px 2px rgb(247, 247, 247);
+    width: 225px;
+    text-align: right;
+    background-position: left;
+    height: 750px;
+    padding-top: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.minimenu2 {
+    position: inherit;
+    height: 675px;
+    background-color: rgb(202, 181, 153);
+    border-radius: 40px;
+    box-shadow: 1px 1px 2px 2px rgb(20, 20, 50);
+    top: 6px;
+    left: 5px;
+    right: 5px;
+    padding-top: 75px;
+}
+#menu2.show {
+    display: block;
+    opacity: 1; /* Make it visible */
+}
+/* Additional styles for the menu items */
+.hamburger-menu2 button {
+    position: relative;
+    top: 40px;
+    background: none;
+    border: none;
+    padding-top: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style-type: none;
+    padding-left: 10px;
+    text-align: right;
+    font-size: 20px;
+    right: 50px;
+    padding: 10px;
+    color: #1C1D34;
+    transition: transform 0.3s ease; /* Smooth transition for menu items */
+    transform: translateY(-20px); /* Initially hidden */
+}
+.hamburger-menu2.show li {
+    transform: translateY(0); /* Show menu items */
+}
+
+/* Styles for the icons */
+.hamburger-menu2 button i {
+    position: absolute;
+    right: -40px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.hamburger-menu2 .message, .hamburger-menu2 a .fa-message {
+    text-decoration: none;
+    color: green;
+}
+
+
+
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 275px;
+    height: 100%;
+    background-color: plum;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+.drawer-content {
+    position: inherit;
+    padding: 20px;
+    top: 5px;
+    right: 5px;
+    left: 5px;
+    width: auto;
+    height: 100%;
+    border-radius: 30px;
+    border: 3px solid #1C1D34;
+    background: thistle;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(0);
+}
+.drawer-content button {
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: antiquewhite;
+    border: 2px solid #1C1D34;
+    color: #1C1D34;
+}
+.drawer.open {
+    transform: translateX(0);
+    position: absolute;
+    left: 275px;
+    right: 300px;
+    top: 150px;
+    width: auto;
+    height: 1000px;
+    border-radius: 30px;
+    display: flex;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+.mesagesss {
+    position: absolute;
+    display: flex;
+    overflow-y: auto;
+    height: 1000px;
+}
+.message01 {
+    position: absolute;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 150px;
+    left: 286px;
+    right: 51%;
+    height: 100px;
+}
+.message01 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 75px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+    background-color: antiquewhite;
+}
+.message01 a {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    top: 27.5px;
+    right: 40px;
+    padding: 10px 15px;
+    background-color: pink;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.message01 a:hover {
+    color: peachpuff;
+    background-color: #292c81;
+    border: 2px solid burlywood;
+}
+.message02 {
+    position: absolute;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 150px;
+    left: 50%;
+    right: 300px;
+    height: 100px;
+}
+.message02 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 75px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+    background-color: antiquewhite;
+    transform: scaleX(-1);
+}
+.message02 a {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    top: 27.5px;
+    right: 40px;
+    padding: 10px 15px;
+    background-color: pink;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.message02 a:hover {
+    color: peachpuff;
+    background-color: #292c81;
+    border: 2px solid burlywood;
+}
+.message03 {
+    position: absolute;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 275px;
+    left: 286px;
+    right: 51%;
+    height: 100px;
+}
+.message03 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 75px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+    background-color: antiquewhite;
+}
+.message03 a {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    top: 27.5px;
+    right: 40px;
+    padding: 10px 15px;
+    background-color: pink;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.message03 a:hover {
+    color: peachpuff;
+    background-color: #292c81;
+    border: 2px solid burlywood;
+}
+
+
+.message04 {
+    position: absolute;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 275px;
+    left: 50%;
+    right: 300px;
+    height: 100px;
+}
+.message04 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 75px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+    background-color: antiquewhite;
+    transform: scaleX(-1);
+}
+.message04 a {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    top: 27.5px;
+    right: 40px;
+    padding: 10px 15px;
+    background-color: pink;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.message04 a:hover {
+    color: peachpuff;
+    background-color: #292c81;
+    border: 2px solid burlywood;
+}
+
+
+.message05 {
+    position: absolute;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 400px;
+    left: 286px;
+    right: 51%;
+    height: 100px;
+}
+.message05 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 75px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+    background-color: antiquewhite;
+}
+.message05 a {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    top: 27.5px;
+    right: 40px;
+    padding: 10px 15px;
+    background-color: pink;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.message05 a:hover {
+    color: peachpuff;
+    background-color: #292c81;
+    border: 2px solid burlywood;
+}
+
+.message06 {
+    position: absolute;
+    background-color: #1C1D34;
+    border: 2px solid antiquewhite;
+    border-radius: 50px;
+    top: 400px;
+    left: 50%;
+    right: 300px;
+    height: 100px;
+}
+.message06 img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 75px;
+    border-radius: 100px;
+    border: 2px solid peachpuff;
+    background-color: antiquewhite;
+    transform: scaleX(-1);
+}
+.message06 a {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    top: 27.5px;
+    right: 40px;
+    padding: 10px 15px;
+    background-color: pink;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.message06 a:hover {
+    color: peachpuff;
+    background-color: #292c81;
+    border: 2px solid burlywood;
+}
+
+.scrollable-div .textt {
+    position: absolute;
+    color: antiquewhite;
+    top: 75%;
+    left: 42.5%;
+}
+.mtitle {
+    position: relative;
+    color: antiquewhite;
+    left: 100px;
+    font-size: 25px;
+    top: -5px;
+}
+.mcontent {
+    position: relative;
+    color: antiquewhite;
+    left: 100px;
+    width: 60%;
+    right: 10px;
+    top: -25px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+

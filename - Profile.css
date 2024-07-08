@@ -1,0 +1,95 @@
+
+.hamburger-menu .profile, .hamburger-menu a .fa-user {
+    text-decoration: none;
+    color: green;
+}
+.coverpfp {
+    position: relative;
+}
+
+.coverpfp .profile {
+    position: absolute;
+    width: 224px;
+    height: 224px;
+    left: 450px;
+    top: 150px;
+    border: 3px solid #1C1D34;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px 3px antiquewhite;
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+}
+
+.coverpfp .cover {
+    position: absolute;
+    width: 600px; /* Set a fixed width for the cover photo */
+    height: 250px;
+    left: 275px;
+    top: 400px;
+    border: 3px solid #1C1D34;
+    border-radius: 30px;
+    box-shadow: 2px 2px 3px 3px antiquewhite;
+    object-fit: cover; /* Ensures the image covers the area without distorting */
+}
+.info {
+    position: absolute;
+    background-color: antiquewhite;
+    width: 380px;
+    height: 1000px;
+    right: 45px;
+    top: 145px;
+    border-radius: 30px;
+    border: 3px solid #1C1D34;
+}
+.info2 {
+    position: absolute;
+    background-color: #1C1D34;
+    width: 380px;
+    height: 1000px;
+    right: 10px;
+    top: 10px;
+    border-radius: 30px;
+    border: 3px solid antiquewhite;
+    overflow-y: auto;
+}
+.info2 .title {
+    position: relative;
+    padding: 0 20px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: antiquewhite;
+}
+.info3 {
+    position: relative;
+}
+.info3 p {
+    position: relative;
+    color: peachpuff;
+    font-size: 18px;
+    left: 25px;
+    top: 20px;
+}
+.info3 input {
+    position: absolute;
+    right: 25px;
+    margin-top: -25px;
+    border-radius: 15px;
+    width: 190px;
+    padding: 2.5px 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+button {
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    padding: 10px 25px;
+    width: 150px;
+    left: 35px;
+    top: 50px;
+    border-radius: 25px;
+    border: 2px solid #1C1D34;
+    box-shadow: 1px 1px 1px 1px white;
+    background-color: antiquewhite;
+    color: #1C1D34;
+}
